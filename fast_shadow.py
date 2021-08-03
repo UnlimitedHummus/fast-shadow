@@ -1,7 +1,6 @@
 import numpy as np
 from PIL import Image
 import PIL
-import matplotlib.pyplot as plt
 
 # MIT Licensed (see License text at the bottom
 
@@ -65,10 +64,6 @@ def shadow_calc(a, azimuth, altitude, scale, resample="bilinear"):
     if x_offset != 0 and y_offset != 0:
         shadows = shadows[x_offset + x_remainder:-x_offset, y_offset + y_remainder:-y_offset]
 
-    plt.imshow(shadows)
-    plt.show()
-    plt.imshow(a[360:480, 200:500])
-    plt.show()
     return shadows
 
 
